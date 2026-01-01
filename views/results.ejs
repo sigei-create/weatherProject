@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search History</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Search History</h1>
+  <ul>
+    <% history.forEach(item => { %>
+      <li>
+        <%= item.city %> — <%= item.temp %>°C (<%= item.description %>) 
+        on <%= new Date(item.date).toLocaleString() %>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/">Back</a>
+</body>
+</html>
